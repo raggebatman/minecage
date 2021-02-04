@@ -55,7 +55,11 @@ For example, 2 = 2x resolution.
 * `blend-masked`: Same as blend but masked; fully transparent pixels don't get written to
 
 ### example: 2x overlay
-`minecage.py --source 1.16.5.jar --destination ~/Documents/thefunny --image ~/Images/bazinga.jpg --version 6 --scale 2 --mode overlay`
+`minecage.py --source 1.16.5.jar --destination ~/Documents/thefunny --image ~/Pictures/bazinga.png --version 6 --scale 2 --mode overlay`
+
+The images are simply stretched to fit, lots of broken looking textures here
+![bazinga.png](https://github.com/raggebatman/minecage/blob/main/examples/bazinga.png?raw=true)
+![bazinga-title.png](https://github.com/raggebatman/minecage/blob/main/examples/bazinga-title.png?raw=true)
 
 ### example: 4x overlay-masked
 `minecage.py --source ./1.16.5.jar --destination C:\User\username\Documents\thefunny --image C:\User\username\Pictures\thecage.png --version 6 --scale 4 --mode overlay-masked`
@@ -65,7 +69,37 @@ With this one you can see that it preserves the transparent pixels
 ![the_cage-ingame.png](https://github.com/raggebatman/minecage/blob/main/examples/the_cage-ingame.png?raw=true)
 
 ### example with mods: 2x blend "verbose"
-`minecage.py --source 1.12.2.jar [TODO:add the ones i use] --destination /home/user/Documents/thefunny --image /home/ragge/Images/tux.png --version 3 --scale 2 --mode blend`
+`minecage.py --source 1.12.2.jar OpenComputers-1.12.2.jar ~/Documents/Mekanism-1.12.2.jar --destination /home/user/Desktop/thefunny --image /home/user/Pictures/tux.png --version 3 --scale 2 --mode blend --verbose`
+
+Outputs some information to the console.
+Now you get the overlayed images but with some added transparency.
+
+```
+Appending ".jar" paths to array
+Extracting ".png" images to "thefunny"
+Processing images with "blend" at 2x resolution
+1 files failed, 2443 files completed
+```
+
+![tux.png](https://github.com/raggebatman/minecage/blob/main/examples/tux.png?raw=true)
 
 ### example with mods: 4x blend-masked "extra verbose"
-`doas minecage.py --source 1.12.2.jar [TODO:add the ones i use] --destination /thefunny --image ./stallman.jpg --version 3 --scale 4 --mode blend-masked`
+`minecage.py --source 1.12.2.jar ../Mekanism-1.12.2.jar OpenComputers-1.12.2.jar --destination "~/Richard Stallman/thefunny" --image ./stallman.jpg --version 3 --scale 4 --mode blend-masked -vv`
+
+More information gets output to the console, it goes up to 3x (-vvv) and at that point it outputs every path it's processing.
+With this you get both the transparency and proper backgrounds, best for playability in my opinion.
+
+```
+Appending ".jar" paths to array
+Processing "1.12.2.jar"
+Processing "OpenComputers-1.12.2.jar"
+Processing "Mekanism-1.12.2.jar"
+Extracting ".png" images to "thefunny"
+Extracting "1.12.2.jar"
+Extracting "OpenComputers-1.12.2.jar"
+Extracting "Mekanism-1.12.2.jar"
+Processing images with "blend-masked" at 4x resolution
+1 files failed, 2443 files completed
+```
+
+![stallman.png](https://github.com/raggebatman/minecage/blob/main/examples/stallman.png?raw=true)
