@@ -53,8 +53,14 @@ For example, 2 = 2x resolution.
 * `overlay-masked`: Same as overlay but masked; fully transparent pixels don't get written to
 * `blend-masked`: Same as blend but masked; fully transparent pixels don't get written to
 
-### example: 4x blend-masked
-`minecage.py --source ./1.16.5.jar --destination /home/ragge/Documents/thefunny --image /home/ragge/Images/thecage.jpg --version 6 --scale 4 --mode overlay-masked`
-
 ### example: 2x overlay
 `minecage.py --source 1.16.5.jar --destination D:\thefunny --image C:\Users\ragge\Pictures\bazinga.jpg --version 6 --scale 2 --mode overlay`
+
+### example: 4x overlay-masked
+`minecage.py --source ./1.16.5.jar --destination /home/ragge/Documents/thefunny --image /home/ragge/Images/thecage.jpg --version 6 --scale 4 --mode overlay-masked`
+
+### example with mods: 4x blend "extra verbose"
+`minecage.py --source 1.12.2.jar [TODO:add the ones i use] --destination /home/ragge/Documents/thefunny --image /home/ragge/Images/tux.png --version 3 --scale 4 --mode blend`
+
+### example with mods: 2x blend-masked "verbose"
+`minecage.py --source 1.12.2.jar [TODO:add the ones i use] --destination /home/ragge/Documents/thefunny --image /home/ragge/Images/stallman.jpg --version 3 --scale 2 --mode blend-masked`
