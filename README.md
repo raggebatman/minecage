@@ -1,5 +1,6 @@
 # [minecage](https://youtu.be/vTLWIi7Wl1M?t=84)
-This Python script is made for Minecraft and is capable of reading a selection of Java Archive files, taking all images in them, overlaying an image, then creating a resource pack from that. Works with mods too since they're structured the same way as any other Minecraft JAR. 
+Extract assets from Minecraft JAR files and overlay a source image on top of them, comes with some alternatives.
+Generates a pack.mcmeta and pack.png.
 
 Tested and working on Windows 10 and Arch Linux.
 
