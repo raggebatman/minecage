@@ -55,13 +55,17 @@ For example, 2 = 2x resolution.
 * `blend-masked`: Same as blend but masked; fully transparent pixels don't get written to
 
 ### example: 2x overlay
-`minecage.py --source 1.16.5.jar --destination D:\thefunny --image C:\Users\ragge\Pictures\bazinga.jpg --version 6 --scale 2 --mode overlay`
+`minecage.py --source 1.16.5.jar --destination ~/Documents/thefunny --image ~/Images/bazinga.jpg --version 6 --scale 2 --mode overlay`
 
 ### example: 4x overlay-masked
-`minecage.py --source ./1.16.5.jar --destination /home/ragge/Documents/thefunny --image /home/ragge/Images/thecage.jpg --version 6 --scale 4 --mode overlay-masked`
+`minecage.py --source ./1.16.5.jar --destination C:\User\username\Documents\thefunny --image C:\User\username\Pictures\thecage.png --version 6 --scale 4 --mode overlay-masked`
 
-### example with mods: 4x blend "extra verbose"
-`minecage.py --source 1.12.2.jar [TODO:add the ones i use] --destination /home/ragge/Documents/thefunny --image /home/ragge/Images/tux.png --version 3 --scale 4 --mode blend`
+With this one you can see that it preserves the transparent pixels
+![the_cage.png](https://github.com/raggebatman/minecage/blob/main/examples/the_cage.png?raw=true)
+![the_cage-ingame.png](https://github.com/raggebatman/minecage/blob/main/examples/the_cage-ingame.png?raw=true)
 
-### example with mods: 2x blend-masked "verbose"
-`minecage.py --source 1.12.2.jar [TODO:add the ones i use] --destination /home/ragge/Documents/thefunny --image /home/ragge/Images/stallman.jpg --version 3 --scale 2 --mode blend-masked`
+### example with mods: 2x blend "verbose"
+`minecage.py --source 1.12.2.jar [TODO:add the ones i use] --destination /home/user/Documents/thefunny --image /home/ragge/Images/tux.png --version 3 --scale 2 --mode blend`
+
+### example with mods: 4x blend-masked "extra verbose"
+`doas minecage.py --source 1.12.2.jar [TODO:add the ones i use] --destination /thefunny --image ./stallman.jpg --version 3 --scale 4 --mode blend-masked`
